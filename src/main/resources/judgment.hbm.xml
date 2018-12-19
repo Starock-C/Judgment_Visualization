@@ -1,0 +1,46 @@
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="model">
+    <!-- 标识一个类的xml映射,name为类名,table为表名 -->
+    <class name="Defendant" table="tbl_defendant">
+        <!-- 主键的设置,generator标识主键生成方式,因为native便于数据库的移植所以.嘿嘿!你懂的 -->
+        <id name="id" type="int">
+            <column name="id"/>
+            <generator class="assigned"/>
+        </id>
+        <!-- 这里配了该类一个属性街道名称 name属性字段,column,数据库对应列 -->
+        <property name="name" type="string" column="name" />
+        <property name="gender" type="string" column="gender" />
+        <property name="birthDay" type="string" column="birthDay" />
+        <property name="birthProvince" type="string" column="birthProvince" />
+        <property name="birthCity" type="string" column="birthCity" />
+        <property name="nation" type="string" column="nation" />
+        <property name="education" type="string" column="education"/>
+        <property name="career" type="string" column="career"/>
+        <property name="householdReg" type="string" column="householdReg"/>
+        <property name="residence" type="string" column="residence"/>
+        <many-to-one name="judgment" column="caseNumber"/>
+    </class>
+
+    <class name="Judgment" table="tbl_judgment">
+        <id name="caseNumber" type="string">
+            <column name="caseNumber"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="courtName" type="string" column="courtName" />
+        <property name="firstDefendant" type="string" column="firstDefendant"/>
+        <property name="defendantsCount" type="int" column="defendantsCount"/>
+        <property name="crime" type="string" column="crime" />
+        <property name="propertyPunishment" type="string" column="propertyPunishment" />
+        <property name="sentence" type="string" column="sentence" />
+        <property name="penaltyType" type="string" column="penaltyType" />
+        <property name="penalty" type="int" column="penalty" />
+        <property name="drugType" type="string" column="drugType" />
+        <property name="quantity" type="string" column="quantity" />
+        <property name="contact" type="string" column="contact" />
+        <property name="payment" type="string" column="payment" />
+        <property name="trade" type="string" column="trade" />
+        <property name="transport" type="string" column="transport" />
+    </class>
+
+
+</hibernate-mapping>

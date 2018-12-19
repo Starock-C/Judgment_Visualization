@@ -1,0 +1,36 @@
+plugins {
+    id 'java'
+}
+
+group 'com.Luoli'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    // https://mvnrepository.com/artifact/org.apache.commons/commons-csv
+    compile group: 'org.apache.commons', name: 'commons-csv', version: '1.6'
+    // https://mvnrepository.com/artifact/org.hibernate/hibernate-core
+    compile group: 'org.hibernate', name: 'hibernate-core', version: '5.4.0.Final'
+    // https://mvnrepository.com/artifact/org.neo4j/neo4j
+    compile group: 'org.neo4j', name: 'neo4j', version: '3.4.9'
+    // https://mvnrepository.com/artifact/org.neo4j.driver/neo4j-java-driver
+    compile group: 'org.neo4j.driver', name: 'neo4j-java-driver', version: '1.4.4'
+    // https://mvnrepository.com/artifact/org.apache.poi/poi
+    compile group: 'org.apache.poi', name: 'poi', version: '4.0.1'
+    // https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml
+    compile group: 'org.apache.poi', name: 'poi-ooxml', version: '4.0.1'
+    // https://mvnrepository.com/artifact/org.apache.poi/poi-scratchpad
+    compile group: 'org.apache.poi', name: 'poi-scratchpad', version: '4.0.1'
+    // https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml-schemas
+    compile group: 'org.apache.poi', name: 'poi-ooxml-schemas', version: '4.0.1'
+    // https://mvnrepository.com/artifact/org.mariadb.jdbc/mariadb-java-client
+    compile group: 'org.mariadb.jdbc', name: 'mariadb-java-client', version: '2.2.1'
+    compile 'com.jfoenix:jfoenix:8.0.8' // Java 8
+
+}
